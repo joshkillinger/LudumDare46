@@ -9,6 +9,8 @@ public class ShipController : MonoBehaviour
     public float boostMult = 1.2f;
 
     public bool go = false;
+
+    public GameObject targetObject = null;
     
     // Start is called before the first frame update
     void Start()
@@ -29,9 +31,8 @@ public class ShipController : MonoBehaviour
             }
 
             this.transform.position += Time.deltaTime * velocity * this.transform.forward;
-
-
-
         }
+        
+        this.transform.LookAt(targetObject.transform);
     }
 }

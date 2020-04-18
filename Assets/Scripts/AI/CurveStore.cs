@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AI
 {
-  [CreateAssetMenu(fileName = "CurveStore", menuName = "Scriptables/CurveStore")]
+  [CreateAssetMenu(fileName = "CurveStore", menuName = "Scriptables/Curve Store")]
   public class CurveStore : ScriptableObject
   {
     [Serializable]

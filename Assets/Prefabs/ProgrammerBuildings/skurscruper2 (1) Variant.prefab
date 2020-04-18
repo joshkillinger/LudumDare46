@@ -156,10 +156,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109254368266526796, guid: 22323c946e3d64b45a296a32cf11bca7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109254368266526796, guid: 22323c946e3d64b45a296a32cf11bca7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109254368266526796, guid: 22323c946e3d64b45a296a32cf11bca7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3194021696644957917, guid: 22323c946e3d64b45a296a32cf11bca7,
         type: 3}
       propertyPath: m_Name
-      value: skurscruper2 (1)
+      value: skurscruper2 (1) Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22323c946e3d64b45a296a32cf11bca7, type: 3}

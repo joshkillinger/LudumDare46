@@ -65,22 +65,22 @@ PrefabInstance:
     - target: {fileID: 4629922851898269067, guid: 8e2d4bb5ed30e0446a4218f0e5952e09,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4629922851898269067, guid: 8e2d4bb5ed30e0446a4218f0e5952e09,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4629922851898269067, guid: 8e2d4bb5ed30e0446a4218f0e5952e09,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7167311107271850778, guid: 8e2d4bb5ed30e0446a4218f0e5952e09,
         type: 3}
       propertyPath: m_Name
-      value: skurscruper2
+      value: skurscruper2 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2d4bb5ed30e0446a4218f0e5952e09, type: 3}

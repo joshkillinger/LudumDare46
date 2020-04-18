@@ -25,6 +25,24 @@ public class MoveTargetObject : MonoBehaviour
         var horizontalSpeed = horizontal * speed;
         var horizontalDistance = this.transform.position.x;
 
+
+        bool bankright = Input.GetAxis("BankRight") > 0.1;
+        bool bankleft = Input.GetAxis("BankLeft") > 0.1;
+
+        if (bankright && !bankleft)
+        {
+            horizontal = 2;
+            horizontalSpeed += 0.2f * speed;
+        }
+        else if (!bankright && bankleft)
+        {
+            horizontal = -2;
+            horizontalSpeed -= 0.2f * speed;
+        }
+        else
+        {
+            //TODO: Flippy thing?
+        }
         rotationParam = Mathf.Lerp(rotationParam, horizontal, 0.1f);
         animator.SetFloat("Rotation", rotationParam);
 

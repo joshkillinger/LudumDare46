@@ -34,7 +34,7 @@ public class GunController : MonoBehaviour
         if (Input.GetAxis("Fire1") > 0 && curCooldown <= 0)
         {
             curCooldown = cooldown;
-            var fireCount = Mathf.CeilToInt(currentEnergy * drainPercentage);
+            var fireCount = Mathf.RoundToInt(currentEnergy * drainPercentage);
 
             if (fireCount > 1)
             {
@@ -48,7 +48,7 @@ public class GunController : MonoBehaviour
                     obj.transform.Rotate(i * Random.Range(-maxDeviation, maxDeviation), i * Random.Range(-maxDeviation, maxDeviation), 0);
                 }
             }
-            else
+            else if (fireCount >= 0.9f)
             {
                 var targetBarrel = barrels[++barrelIndex % barrels.Count];
                 var obj = Instantiate(shot);

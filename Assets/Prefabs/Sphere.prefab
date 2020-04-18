@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6022878855687084293}
   - component: {fileID: 6022878855687084314}
   - component: {fileID: 6022878855687084289}
+  - component: {fileID: -5887932972414463931}
+  - component: {fileID: 4504932702253867418}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -90,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6022878855687084315}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -215,3 +217,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   lifetime: 5
+--- !u!114 &-5887932972414463931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022878855687084315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb795106fd664f3eab19c1cbc083beca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!54 &4504932702253867418
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022878855687084315}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3

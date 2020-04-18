@@ -2,11 +2,11 @@ using UnityEngine;
 
 namespace AI
 {
-  public class FaceMovementDirection : MonoBehaviour
+  public class FaceMovementDirection : Rollable
   {
     private Vector3? lastPos = null;
     
-    private void LateUpdate()
+    protected override void lateUpdate()
     {
       if (lastPos.HasValue)
       {

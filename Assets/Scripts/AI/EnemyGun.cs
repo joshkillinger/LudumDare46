@@ -1,6 +1,7 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace AI
 {
@@ -8,6 +9,7 @@ namespace AI
   {
     public GameObject shot;
     public bool onlyShootOnPlayerVisible = false;
+    public float maxScatterAngle = 1;
     
     public void Event_Shoot()
     {
@@ -32,6 +34,8 @@ namespace AI
       var obj = Instantiate(shot);
       obj.transform.position = transPos;
       obj.transform.rotation = transRot;
+      obj.transform.Rotate(Random.Range(-maxScatterAngle, maxScatterAngle), Random.Range(-maxScatterAngle, maxScatterAngle), 0);
+
       
     }
   }

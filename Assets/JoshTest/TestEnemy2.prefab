@@ -353,6 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 6022878855687084315, guid: 197a0ac7c2063c64faaa2c995085b8da, type: 3}
   onlyShootOnPlayerVisible: 0
+  maxScatterAngle: 2
 --- !u!114 &7946273588924107699
 MonoBehaviour:
   m_ObjectHideFlags: 0

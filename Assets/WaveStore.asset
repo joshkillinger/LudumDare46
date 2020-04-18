@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: WaveStore
   m_EditorClassIdentifier: 
   Waves:
-  - Name: Demo Sequential Wave
-    Wave: {fileID: 8654644187803401653, guid: c7f97e8346db19349bd0120e7646c604, type: 3}
-  - Name: Demo Star Wave
+  - Name: star wave ltr
+    Duration: 5
     Wave: {fileID: 2664228646475917359, guid: 79da1dec248815944b2e8676075f8f80, type: 3}
+  - Name: ltrtl facing staggered
+    Duration: 5
+    Wave: {fileID: 4297462158757494154, guid: bdc50e7f6d364ab42b6a9b7493d3302a, type: 3}

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace AI
 {
   public class StaggeredEnemySpawner : MonoBehaviour
   {
-    public Animator Prefab;
-    public AnimatorController path;
+    [FormerlySerializedAs("Prefab")] public GameObject Prototype;
     public int MinCount;
     public int MaxCount;
     public float Stagger;
@@ -18,9 +18,8 @@ namespace AI
 
       for (int i = 0; i < count; ++i)
       {
-        var instance = Instantiate(Prefab, transform);
-        instance.runtimeAnimatorController = path;
-        
+        var instance = Instantiate(Prototype, transform);
+        instance.SetActive(true);
         yield return new WaitForSeconds(Stagger);
       }
     }

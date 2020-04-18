@@ -8,6 +8,10 @@ public class MoveTargetObject : MonoBehaviour
     public float verticalDistanceLimit = 8;
     public float speed = 5;
     public float smoothNumber = 6;
+
+    public Animator animator;
+    private float rotationParam = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,12 @@ public class MoveTargetObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var horizontalSpeed = Input.GetAxis("Horizontal") * speed;
+        var horizontal = Input.GetAxis("Horizontal");
+        var horizontalSpeed = horizontal * speed;
         var horizontalDistance = this.transform.position.x;
+
+        rotationParam = Mathf.Lerp(rotationParam, horizontal, 0.1f);
+        animator.SetFloat("Rotation", rotationParam);
 
         var halfHorizontalLimit = horizontalDistanceLimit / 2;
         if (horizontalDistance > halfHorizontalLimit && horizontalSpeed > 0)

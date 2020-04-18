@@ -70,4 +70,9 @@ public class GunController : MonoBehaviour
 
         slider.value = currentEnergy / energyMax;
     }
+
+    public void AddEnergy(float energy)
+    {
+        currentEnergy = Mathf.Clamp(currentEnergy + energy, 0, energyMax);
+    }
 }

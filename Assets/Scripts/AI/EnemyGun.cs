@@ -36,7 +36,6 @@ namespace AI
       obj.transform.rotation = transRot;
       obj.transform.Rotate(Random.Range(-maxScatterAngle, maxScatterAngle), Random.Range(-maxScatterAngle, maxScatterAngle), 0);
 
-      
     }
   }
 }

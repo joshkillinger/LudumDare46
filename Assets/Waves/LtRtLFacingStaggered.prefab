@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7815137041772186263}
   - component: {fileID: 858396539956629440}
   - component: {fileID: 1050848783}
+  - component: {fileID: 8569976944156673891}
   m_Layer: 0
   m_Name: LtRtLFacingStaggered
   m_TagString: Untagged
@@ -46,9 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prototype: {fileID: 4293942305195793126}
-  MinCount: 3
-  MaxCount: 4
-  Stagger: 1
+  MinCount: 6
+  MaxCount: 8
+  Stagger: 0.5
 --- !u!114 &1050848783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +63,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 20
+--- !u!114 &8569976944156673891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297462158757494154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1ec8e0ced9441197e3698f017abe6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 30
 --- !u!1001 &6738723987114348252
 PrefabInstance:
   m_ObjectHideFlags: 0

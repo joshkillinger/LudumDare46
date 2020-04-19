@@ -177,6 +177,7 @@ MonoBehaviour:
   ActiveText: ACTIVE
   DamagedBlinkRate: 0.15
   ChargingBlinkRate: 0.25
+  DamagedTime: 2
 --- !u!1 &514568812390294229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6528256333768529686}
   - component: {fileID: 4990945504362574073}
+  - component: {fileID: 190340909270939417}
   m_Layer: 5
   m_Name: MainWeapon
   m_TagString: Untagged
@@ -1139,6 +1141,21 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &190340909270939417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3465112004968000729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26445d9ff2f40609cf23ca4cf82fe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Indicators:
+  - {fileID: 5855848973231349430}
+  - {fileID: 6737242780102802157}
 --- !u!1 &3468281794801452527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3459,6 +3476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3332582031883799352}
   - component: {fileID: 912791029545659316}
+  - component: {fileID: 1196176209364496116}
   m_Layer: 5
   m_Name: SecondaryWeapon
   m_TagString: Untagged
@@ -3512,3 +3530,21 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &1196176209364496116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113008808952282664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fec242ff8c4d8aac6ad65824461650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Indicators:
+  - {fileID: 7844862431886917174}
+  - {fileID: 6091621301620460045}
+  Counts:
+  - {fileID: 3669818909342981222}
+  - {fileID: 6818439955667895533}

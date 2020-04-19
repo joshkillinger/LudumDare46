@@ -399,6 +399,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cooldown: 2
+  initialCooldown: 2
 --- !u!114 &4198859462152045049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  modelRootToShake: {fileID: 5348341115089479709}
 --- !u!65 &8112554242414797415
 BoxCollider:
   m_ObjectHideFlags: 0

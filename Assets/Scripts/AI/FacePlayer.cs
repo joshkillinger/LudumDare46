@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace AI
@@ -5,15 +6,18 @@ namespace AI
   public class FacePlayer : Rollable
   {
     private GameObject player;
-    
-    private void Start()
-    {
-      player = GameObject.FindWithTag("Player");
-    }
+    public float leadTime = 1.0f;
 
     protected override void lateUpdate()
     {
-      transform.LookAt(player.transform);
+      if (player != null)
+      {
+        transform.LookAt(player.transform.position + leadTime * GameManager.PlayerSpeed * player.transform.forward);
+      }
+      else
+      {
+        player = GameManager.Player;
+      }
     }
   }
 }

@@ -46,3 +46,4 @@ MonoBehaviour:
   Waves: {fileID: 11400000, guid: 713c07f4479c8574d85342e57f2f6f5c, type: 2}
   MinSpawnFrequency: 4
   SpawnVariance: 2
+  AutoSpawn: 1

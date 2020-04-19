@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6812835353507781731}
   - component: {fileID: 6812835353507781724}
   - component: {fileID: 6812835353507781725}
+  - component: {fileID: -4701539262090349542}
   m_Layer: 0
   m_Name: BtFtBLtRFighters
   m_TagString: Untagged
@@ -62,6 +63,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 13
+--- !u!114 &-4701539262090349542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812835353507781726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1ec8e0ced9441197e3698f017abe6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 30
 --- !u!1001 &6812835351530112735
 PrefabInstance:
   m_ObjectHideFlags: 0

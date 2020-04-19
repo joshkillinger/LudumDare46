@@ -8,6 +8,7 @@ namespace DefaultNamespace
   {
     public GunController gun;
     public ParticleSystem particles;
+    public AudioSource audioSource;
 
     private CapsuleCollider skimmingCollider;
     public Collider hitboxCollider;
@@ -60,6 +61,7 @@ namespace DefaultNamespace
     {
         gun.AddEnergy(energyAdd);
         particles.Emit(1);
+        audioSource.Play();
     }
   }
 }

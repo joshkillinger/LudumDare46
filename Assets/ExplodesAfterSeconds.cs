@@ -37,6 +37,6 @@ public class ExplodesAfterSeconds : MonoBehaviour
         var obj = Instantiate(explosion);
         obj.transform.position = this.transform.position;
         obj.transform.rotation = this.transform.rotation;
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 1.0f);
     }
 }

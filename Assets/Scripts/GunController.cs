@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
-    public List<Transform> barrels = new List<Transform>();
+    public List<AudioSource> barrels = new List<AudioSource>();
     public GameObject shot = null;
     public Slider slider;
 
     public float energyMax = 100;
     public float regenerationRate = 5;
-    public float drainPercentage = 0.4f;
+    public float drainAmount = 5f;
     public float cooldown = 0.2f;
     public float maxDeviation = 0.4f;
+    public float shotAmount = 2;
 
     private float currentEnergy;
     private int barrelIndex = 0;
@@ -33,30 +34,23 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetAxis("Fire1") > 0 && curCooldown <= 0)
         {
-            curCooldown = cooldown;
-            var fireCount = Mathf.RoundToInt(currentEnergy * drainPercentage);
 
-            if (fireCount > 1)
-            {
-                var halfFireCount = fireCount / 2;
-                for (int i = 0; i < fireCount; i++)
-                {
-                    var targetBarrel = barrels[++barrelIndex % barrels.Count];
-                    var obj = Instantiate(shot);
-                    obj.transform.position = targetBarrel.position;
-                    obj.transform.rotation = targetBarrel.rotation;
-                    obj.transform.Rotate(i * Random.Range(-maxDeviation, maxDeviation), i * Random.Range(-maxDeviation, maxDeviation), 0);
-                }
-            }
-            else if (fireCount >= 0.9f)
+            for (int i = 0; i < shotAmount; i++)
             {
                 var targetBarrel = barrels[++barrelIndex % barrels.Count];
+                targetBarrel.Play();
                 var obj = Instantiate(shot);
-                obj.transform.position = targetBarrel.position;
-                obj.transform.rotation = targetBarrel.rotation;
+                obj.transform.position = targetBarrel.transform.position;
+                obj.transform.rotation = targetBarrel.transform.rotation;
+                obj.transform.Rotate(Random.Range(-maxDeviation, maxDeviation), Random.Range(-maxDeviation, maxDeviation), 0);
             }
 
-            currentEnergy -= fireCount;
+            curCooldown = cooldown +  3 * cooldown * (1 - (currentEnergy / energyMax));
+            currentEnergy -= drainAmount;
+            if (currentEnergy < 0)
+            {
+                currentEnergy = 0;
+            }
         }
         else
         {

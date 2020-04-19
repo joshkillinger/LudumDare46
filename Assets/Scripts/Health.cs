@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Destroyable))]
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 1;
+    public float maxHealth = 4;
 
     private float curHealth;
 

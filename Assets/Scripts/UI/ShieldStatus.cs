@@ -27,7 +27,7 @@ namespace DefaultNamespace.UI
     private void Start()
     {
       text = GetComponent<TMP_Text>();
-      GameObject.FindWithTag("Player").GetComponent<Health>();
+      health = GameObject.FindWithTag("Player").GetComponent<Health>();
     }
     
     private void Update()

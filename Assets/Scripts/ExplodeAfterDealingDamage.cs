@@ -4,7 +4,7 @@ namespace DefaultNamespace
 {
   public class ExplodeAfterDealingDamage : MonoBehaviour
   {
-    public GameObject explosion;
+    public GameObject explosion = null;
 
     public void Event_Explode()
     {

@@ -14,8 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waves:
   - Name: star wave ltr
-    Duration: 5
+    Duration: 8
     Wave: {fileID: 2664228646475917359, guid: 79da1dec248815944b2e8676075f8f80, type: 3}
   - Name: ltrtl facing staggered
-    Duration: 5
+    Duration: 10
     Wave: {fileID: 4297462158757494154, guid: bdc50e7f6d364ab42b6a9b7493d3302a, type: 3}
+  - Name: ftb rtl fighter pairs
+    Duration: 4
+    Wave: {fileID: 4482829025515430223, guid: 59a6689504b817a4a89158138d3da99f, type: 3}
+  - Name: btftb rtl fighters
+    Duration: 9
+    Wave: {fileID: 2796160811456090301, guid: 52c94bd4f68687443a82bea68a8cd4bb, type: 3}
+  - Name: btftb ltr fighters
+    Duration: 9
+    Wave: {fileID: 6812835353507781726, guid: eb551b092af095243bc2a2c86324eb80, type: 3}

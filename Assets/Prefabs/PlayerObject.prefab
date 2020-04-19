@@ -5838,7 +5838,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952781842928134}
-  m_LocalRotation: {x: -0.0042885114, y: 2.688473e-10, z: 1.1529575e-12, w: 0.9999909}
+  m_LocalRotation: {x: -0.0042885114, y: -2.6884722e-10, z: -1.1529727e-12, w: 0.9999909}
   m_LocalPosition: {x: 0, y: 7.4, z: -31.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5916,7 +5916,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952782039405763}
-  m_LocalRotation: {x: -0.0042885114, y: 2.688472e-10, z: 1.1529618e-12, w: 0.9999909}
+  m_LocalRotation: {x: -0.0042885114, y: -2.6884722e-10, z: -1.1529727e-12, w: 0.9999909}
   m_LocalPosition: {x: 0, y: 7.4, z: -31.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6205,11 +6205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab8155051fd3ae4c86ee8aebeec4b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Version: 0
   barrels:
   - {fileID: 1177600235}
   - {fileID: 1986064671}
   shot: {fileID: 1837433589045223570, guid: 33f7fe2d07118db429aa369f192825bb, type: 3}
-  slider: {fileID: 786490545}
   energyMax: 100
   regenerationRate: 20
   drainAmount: 2.5
@@ -6276,6 +6276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  shieldRestoreTime: 5
   hitSound: {fileID: 8300000, guid: 0a599dc5bea81fe4eb5aba11b1e542ee, type: 3}
   source: {fileID: 260529272}
 --- !u!114 &351268958041429709

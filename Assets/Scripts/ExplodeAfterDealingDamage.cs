@@ -8,9 +8,13 @@ namespace DefaultNamespace
 
     public void Event_Explode()
     {
-      var obj = Instantiate(explosion);
-      obj.transform.position = this.transform.position;
-      obj.transform.rotation = this.transform.rotation;
+      if (explosion != null)
+      {
+        var obj = Instantiate(explosion);
+        obj.transform.position = this.transform.position;
+        obj.transform.rotation = this.transform.rotation;
+      }
+
       Destroy(this.gameObject);
     }
 

@@ -19291,6 +19291,7 @@ GameObject:
   - component: {fileID: 8389867563684206611}
   - component: {fileID: 771079795206880835}
   - component: {fileID: 1837433589045223571}
+  - component: {fileID: 738315121032634863}
   m_Layer: 8
   m_Name: Laser
   m_TagString: Untagged
@@ -19527,6 +19528,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &738315121032634863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837433589045223570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b8eb6a4c2a4db0be70b837baebba86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 0}
 --- !u!1 &3628046925760265789
 GameObject:
   m_ObjectHideFlags: 0

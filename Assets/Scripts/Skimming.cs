@@ -65,6 +65,7 @@ namespace DefaultNamespace
         gun.AddEnergy(energyAdd);
         particles.Emit(1);
         audioSource.Play();
+        Destroy(other.gameObject);
       }
     }
   }

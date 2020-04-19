@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_PlayerMetal
+  m_Name: Mat_PlayerMetalAccent
   m_Shader: {fileID: -6465566751694194690, guid: 34f36eac83e99ed48881f41fca0d3d8f,
     type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _DOUBLESIDED_ON
@@ -64,7 +64,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_383F85BC: {r: 0.30397826, g: 0.35430145, b: 0.6509434, a: 1}
+    - Color_383F85BC: {r: 0.13105197, g: 0.15306115, b: 0.2924528, a: 1}
     - Color_C115121B: {r: 0.15130919, g: 0.050436396, b: 3.2111173, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

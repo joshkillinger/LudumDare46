@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
+    public int Version = 0;
+    
     public List<AudioSource> barrels = new List<AudioSource>();
     public GameObject shot = null;
-    public Slider slider;
 
     public float energyMax = 100;
     public float regenerationRate = 5;
@@ -16,7 +17,17 @@ public class GunController : MonoBehaviour
     [HideInInspector]public float maxDeviation = 0.4f;
     [HideInInspector]public float shotAmount = 2;
 
-    private float currentEnergy;
+    private float _currentEnergy;
+    public float CurrentEnergy
+    {
+        get => _currentEnergy;
+        private set
+        {
+            ++Version;
+            _currentEnergy = value;
+        }
+    }
+    
     private int barrelIndex = 0;
     private float curCooldown = 0;
 
@@ -24,9 +35,7 @@ public class GunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentEnergy = energyMax;
-        slider.minValue = 0;
-        slider.maxValue = 1;
+        CurrentEnergy = energyMax;
     }
 
     // Update is called once per frame
@@ -45,11 +54,11 @@ public class GunController : MonoBehaviour
                 obj.transform.Rotate(Random.Range(-maxDeviation, maxDeviation), Random.Range(-maxDeviation, maxDeviation), 0);
             }
 
-            curCooldown = cooldown +  3 * cooldown * (1 - (currentEnergy / energyMax));
-            currentEnergy -= drainAmount;
-            if (currentEnergy < 0)
+            curCooldown = cooldown +  3 * cooldown * (1 - (CurrentEnergy / energyMax));
+            CurrentEnergy -= drainAmount;
+            if (CurrentEnergy < 0)
             {
-                currentEnergy = 0;
+                CurrentEnergy = 0;
             }
         }
         else
@@ -57,16 +66,14 @@ public class GunController : MonoBehaviour
             curCooldown -= Time.deltaTime;
         }
         
-        if (currentEnergy < energyMax)
+        if (CurrentEnergy < energyMax)
         {
-            currentEnergy += regenerationRate * Time.deltaTime;
+            CurrentEnergy += regenerationRate * Time.deltaTime;
         }
-
-        slider.value = currentEnergy / energyMax;
     }
 
     public void AddEnergy(float energy)
     {
-        currentEnergy = Mathf.Clamp(currentEnergy + energy, 0, energyMax);
+        CurrentEnergy = Mathf.Clamp(CurrentEnergy + energy, 0, energyMax);
     }
 }

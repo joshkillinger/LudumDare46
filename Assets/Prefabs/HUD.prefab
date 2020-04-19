@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2226300082952579057}
   - component: {fileID: 1146208114317405586}
   - component: {fileID: 3539522827035357375}
+  - component: {fileID: 1029833433464913036}
   m_Layer: 5
   m_Name: ShieldStatus
   m_TagString: Untagged
@@ -156,6 +157,26 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1029833433464913036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115192379675084348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014a1c10eedd42798d187d925a04ba3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagedColor: {r: 1, g: 0, b: 0, a: 1}
+  ChargingColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  ActiveColor: {r: 0, g: 1, b: 0, a: 1}
+  DamagedText: DAMAGED
+  ChargingText: CHARGING
+  ActiveText: ACTIVE
+  DamagedBlinkRate: 0.15
+  ChargingBlinkRate: 0.25
 --- !u!1 &514568812390294229
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6323017424746524881}
   - component: {fileID: 3226661860337537356}
+  - component: {fileID: 1935630023725791815}
   m_Layer: 5
   m_Name: EnergySlider
   m_TagString: Untagged
@@ -808,10 +830,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.842
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1935630023725791815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439665878493936546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b91fdc276548e9abff86b28bf05976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 3226661860337537356}
 --- !u!1 &2597856356831521067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.008504152, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2801,7 +2836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

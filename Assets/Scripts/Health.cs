@@ -6,11 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(Destroyable))]
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 4;
+    public int maxHealth = 1;
+    public float shieldRestoreTime = 0f;
+    
     public AudioClip hitSound;
     public AudioSource source;
 
-    private float curHealth;
+    private int curHealth;
+    public int CurrentHealth => curHealth;
 
     private Destroyable destroyable;
     // Start is called before the first frame update
@@ -30,9 +33,24 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage()
     {
         source.Play();
-        curHealth -= damage;
+        curHealth -= 1;
+        StopAllCoroutines();
+        
+        if (curHealth > 0 && shieldRestoreTime > 0)
+        {
+            StartCoroutine(restoreHpAfterDelay());
+        }
+    }
+
+    private IEnumerator restoreHpAfterDelay()
+    {
+        yield return new WaitForSeconds(shieldRestoreTime);
+        if (curHealth > 0 && curHealth < maxHealth)
+        {
+            curHealth = maxHealth;
+        }
     }
 }

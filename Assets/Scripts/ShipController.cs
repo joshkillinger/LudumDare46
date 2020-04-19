@@ -11,6 +11,7 @@ public class ShipController : MonoBehaviour
     public bool go = false;
 
     public GameObject targetObject = null;
+    public Animator boostAnimator;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,11 @@ public class ShipController : MonoBehaviour
             if (Input.GetAxis("Boost") > 0)
             {
                 velocity *= boostMult;
+                boostAnimator.SetBool("isBoosting", true);
+            }
+            else
+            {
+                boostAnimator.SetBool("isBoosting", false);
             }
 
             this.transform.position += Time.deltaTime * velocity * this.transform.forward;

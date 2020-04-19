@@ -59,9 +59,13 @@ namespace DefaultNamespace
 
     private void OnTriggerEnter(Collider other)
     {
+      var damage = other.GetComponentInChildren<DealsDamage>();
+      if (damage != null)
+      {
         gun.AddEnergy(energyAdd);
         particles.Emit(1);
         audioSource.Play();
+      }
     }
   }
 }

@@ -7,6 +7,8 @@ public class ShipController : MonoBehaviour
     public float speed = 10f;
     private float velocity = 0;
     public float boostMult = 1.2f;
+    public float boostDrain = 5;
+    public GunController gunController;
 
     public bool go = false;
 
@@ -28,6 +30,7 @@ public class ShipController : MonoBehaviour
 
             if (Input.GetAxis("Boost") > 0)
             {
+                gunController.AddEnergy(-1 * boostDrain * Time.deltaTime);
                 velocity *= boostMult;
                 boostAnimator.SetBool("isBoosting", true);
             }

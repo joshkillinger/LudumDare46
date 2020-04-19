@@ -31,7 +31,7 @@ namespace AI
         var wave = spawnRandomWave();
         var variance = Random.Range(-SpawnVariance, SpawnVariance);
         nextWave = Time.time + variance + MinSpawnFrequency;
-        Debug.Log($"Next wave at {nextWave}");
+        //Debug.Log($"Next wave at {nextWave}");
       }
     }
 

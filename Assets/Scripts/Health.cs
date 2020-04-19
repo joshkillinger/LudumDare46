@@ -7,6 +7,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float maxHealth = 4;
+    public AudioClip hitSound;
+    public AudioSource source;
 
     private float curHealth;
 
@@ -16,6 +18,7 @@ public class Health : MonoBehaviour
     {
         destroyable = this.GetComponent<Destroyable>();
         curHealth = maxHealth;
+        source.clip = hitSound;
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        source.Play();
         curHealth -= damage;
     }
 }

@@ -11,10 +11,10 @@ public class GunController : MonoBehaviour
 
     public float energyMax = 100;
     public float regenerationRate = 5;
-    public float drainAmount = 5f;
-    public float cooldown = 0.2f;
-    public float maxDeviation = 0.4f;
-    public float shotAmount = 2;
+    [HideInInspector]public float drainAmount = 5f;
+    [HideInInspector]public float cooldown = 0.2f;
+    [HideInInspector]public float maxDeviation = 0.4f;
+    [HideInInspector]public float shotAmount = 2;
 
     private float currentEnergy;
     private int barrelIndex = 0;

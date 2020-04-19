@@ -6,6 +6,7 @@ public class ShipController : MonoBehaviour
 {
     public float speed = 10f;
     private float velocity = 0;
+    public float Velocity => velocity;
     public float boostMult = 1.2f;
     public float boostDrain = 5;
     public GunController gunController;

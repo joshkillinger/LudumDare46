@@ -2987,6 +2987,7 @@ GameObject:
   - component: {fileID: 2378783003654631296}
   - component: {fileID: 633414977968670356}
   - component: {fileID: 4400997396146208221}
+  - component: {fileID: 4535156156755935289}
   m_Layer: 5
   m_Name: SpeedValue
   m_TagString: Untagged
@@ -3133,6 +3134,18 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4535156156755935289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018581802382136247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a9275b97394eb98698fb783bc85c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8677496217595792082
 GameObject:
   m_ObjectHideFlags: 0

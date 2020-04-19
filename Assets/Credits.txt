@@ -1,0 +1,20 @@
+Credits:
+
+Jacob Etter
+Ethan Karnopp
+Josh Killinger
+Evan Phillips
+
+Fonts:
+Neon Future
+by arukidz.fl
+https://www.1001fonts.com/neon-future-font.html
+
+Verwalter Demo
+by Edric Studio
+https://www.1001fonts.com/verwalter-font.html
+
+SFX:
+Universal Sound FX
+by Imphenzia
+https://assetstore.unity.com/packages/audio/sound-fx/universal-sound-fx-17256

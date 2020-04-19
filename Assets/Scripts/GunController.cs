@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
-    public List<Transform> barrels = new List<Transform>();
+    public List<AudioSource> barrels = new List<AudioSource>();
     public GameObject shot = null;
     public Slider slider;
 
@@ -38,9 +38,10 @@ public class GunController : MonoBehaviour
             for (int i = 0; i < shotAmount; i++)
             {
                 var targetBarrel = barrels[++barrelIndex % barrels.Count];
+                targetBarrel.Play();
                 var obj = Instantiate(shot);
-                obj.transform.position = targetBarrel.position;
-                obj.transform.rotation = targetBarrel.rotation;
+                obj.transform.position = targetBarrel.transform.position;
+                obj.transform.rotation = targetBarrel.transform.rotation;
                 obj.transform.Rotate(Random.Range(-maxDeviation, maxDeviation), Random.Range(-maxDeviation, maxDeviation), 0);
             }
 

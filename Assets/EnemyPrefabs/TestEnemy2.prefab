@@ -424,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Roll: 0
   leadTime: 1
+  gun: {fileID: 9107109335595617355}
 --- !u!95 &7355473330451600436
 Animator:
   serializedVersion: 3
@@ -524,6 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  shieldRestoreTime: 0
   hitSound: {fileID: 8300000, guid: 0a599dc5bea81fe4eb5aba11b1e542ee, type: 3}
   source: {fileID: 5674079788426404602}
 --- !u!65 &8112554242414797415

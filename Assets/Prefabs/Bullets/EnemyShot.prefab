@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f67f66d48e42574faa9ed22f56943e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 250
+  speed: 175
   lifetime: 5
 --- !u!114 &-5887932972414463931
 MonoBehaviour:
@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb795106fd664f3eab19c1cbc083beca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
 --- !u!54 &4504932702253867418
 Rigidbody:
   m_ObjectHideFlags: 0

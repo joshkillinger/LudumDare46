@@ -1149,11 +1149,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 456868849015566080, guid: a94d1fdf4afbd5c499b15b470e1506c9,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 456868849015566081, guid: a94d1fdf4afbd5c499b15b470e1506c9,
         type: 3}
       propertyPath: m_LocalPosition.x

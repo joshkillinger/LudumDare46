@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: AccentMetal
-    second: {fileID: 2100000, guid: 46e5acb91f9f46843a3e62a6cd25c2c9, type: 2}
+    second: {fileID: 2100000, guid: c408e9586f7736a4a85a2d9798d94689, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BaseMetal
-    second: {fileID: 2100000, guid: de8cdb4d02248c947bf82b0ee332fceb, type: 2}
+    second: {fileID: 2100000, guid: 6eea8741cdddae144b5c6653f8e17d47, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EngineEmissive
-    second: {fileID: 2100000, guid: 1c0e51814775beb43ae01b79aca86474, type: 2}
+    second: {fileID: 2100000, guid: 07fea080988c1d2478928047aa8f29ab, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

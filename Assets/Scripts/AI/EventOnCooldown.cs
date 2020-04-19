@@ -9,11 +9,12 @@ namespace AI
   {
     public UnityEvent newEvent;
     public float cooldown;
+    public float initialCooldown;
     private float curCooldown;
 
     private void Start()
     {
-      curCooldown = cooldown;
+      curCooldown = initialCooldown;
     }
 
     private void Update()

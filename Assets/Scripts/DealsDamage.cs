@@ -15,6 +15,12 @@ namespace DefaultNamespace
       {
         healthComp.TakeDamage(damage);
       }
+
+      var explodes = this.gameObject.GetComponent<ExplodeAfterDealingDamage>();
+      if (explodes != null)
+      {
+        explodes.Event_Explode();
+      }
     }
   }
 }

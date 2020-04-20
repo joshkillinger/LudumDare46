@@ -1,9 +1,12 @@
 Credits:
 
-Jacob Etter
-Ethan Karnopp
-Josh Killinger
-Evan Phillips
+Jacob Etter: Programming
+
+Ethan Karnopp: Modeling, Lighting
+
+Josh Killinger: Programming, Set Dressing, SFX
+
+Evan Phillips: God Emperor of VFX
 
 Fonts:
 Neon Future

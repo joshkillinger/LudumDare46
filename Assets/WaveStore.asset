@@ -28,3 +28,6 @@ MonoBehaviour:
   - Name: btftb ltr fighters
     Duration: 9
     Wave: {fileID: 6812835353507781726, guid: eb551b092af095243bc2a2c86324eb80, type: 3}
+  - Name: LtLBtF
+    Duration: 9
+    Wave: {fileID: 2664228646475917359, guid: 48c4f59bfcd8542409779efb45813944, type: 3}

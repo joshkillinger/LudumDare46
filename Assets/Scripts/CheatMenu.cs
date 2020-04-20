@@ -25,7 +25,7 @@ namespace DefaultNamespace
 
     private void Update()
     {
-      if (Input.GetKeyDown(KeyCode.BackQuote))
+      if (Input.GetKeyUp(KeyCode.BackQuote))
       {
         open = !open;
         setVisibility();
@@ -46,7 +46,7 @@ namespace DefaultNamespace
 
       if (!string.IsNullOrEmpty(value))
       {
-        parseCheat(value);
+        parseCheat(value.ToLower());
       }
     }
 

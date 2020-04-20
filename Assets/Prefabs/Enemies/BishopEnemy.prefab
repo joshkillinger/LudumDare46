@@ -159,7 +159,7 @@ PrefabInstance:
     - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
         type: 3}
       propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: DIe
+      value: Die
       objectReference: {fileID: 0}
     - target: {fileID: 8171361568138951278, guid: a267c81118c4f394ea45087563e699f9,
         type: 3}

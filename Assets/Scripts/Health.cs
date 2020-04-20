@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
 
     private int curHealth;
     public int CurrentHealth => curHealth;
+    private bool dying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +29,10 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (curHealth <= 0)
+        if (curHealth <= 0 && !dying)
         {
             onZeroHp.Invoke();
-            Debug.Log("Invoking!");
+            dying = true;
         }
     }
 

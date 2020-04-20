@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -75.086136, w: 0}
   m_textInfo:
     textComponent: {fileID: 3539522827035357375}
     characterCount: 7
@@ -172,12 +172,15 @@ MonoBehaviour:
   DamagedColor: {r: 1, g: 0, b: 0, a: 1}
   ChargingColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   ActiveColor: {r: 0, g: 1, b: 0, a: 1}
+  Overcharged: {r: 0, g: 1, b: 1, a: 1}
   DamagedText: DAMAGED
   ChargingText: CHARGING
   ActiveText: ACTIVE
+  OverchargedText: OVERCHARGED
   DamagedBlinkRate: 0.15
   ChargingBlinkRate: 0.25
   DamagedTime: 2
+  OverchargedTime: 2
 --- !u!1 &514568812390294229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,13 +3018,13 @@ MonoBehaviour:
   m_margin: {x: -568.97174, y: -146.62964, z: -693.0824, w: -250.44984}
   m_textInfo:
     textComponent: {fileID: 2589904285097622038}
-    characterCount: 26
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 5
-    wordCount: 6
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 2
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

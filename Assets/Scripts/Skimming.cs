@@ -9,13 +9,16 @@ namespace DefaultNamespace
     public GunController gun;
     public ParticleSystem particles;
     public AudioSource audioSource;
+    public ParticleSystem shieldBubble;
 
-    private CapsuleCollider skimmingCollider;
     public Collider hitboxCollider;
     public float energyAdd = 10;
     public float invincibleSkimmingMult = 2.0f;
-    public float invincibleDuration = 1.0f;
+    public float invincibleDuration = 2.0f;
     public float invincibleCooldown = 5.0f;
+    public bool invincible = false;
+
+    private CapsuleCollider skimmingCollider;
     private float baseSkimmingSize;
     private float curCooldown;
     private float curDuration;
@@ -39,6 +42,8 @@ namespace DefaultNamespace
           curDuration = invincibleDuration;
           curCooldown = invincibleCooldown;
           hitboxCollider.enabled = false;
+          invincible = true;
+          shieldBubble.Play();
         }
         else
         {
@@ -49,6 +54,8 @@ namespace DefaultNamespace
       {
         skimmingCollider.radius = baseSkimmingSize;
         hitboxCollider.enabled = true;
+        invincible = false;
+        shieldBubble.Stop();
       }
       
       if (curCooldown >= 0)

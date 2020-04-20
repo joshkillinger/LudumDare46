@@ -74,7 +74,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cooldown: 0.2
-  initialCooldown: 1
+  initialCooldown: 0
 --- !u!1 &3608844012469886547
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1ec8e0ced9441197e3698f017abe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 300
+  Speed: 200
 --- !u!114 &3608844012469886549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb795106fd664f3eab19c1cbc083beca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
 --- !u!114 &3203699690956311047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006ecdab6ff745f2a1b686367063ca3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToLive: 4
+  TimeToLive: 3
 --- !u!1 &3608844013096469030
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,4 +313,4 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cooldown: 0.2
-  initialCooldown: 1
+  initialCooldown: 0

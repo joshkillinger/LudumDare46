@@ -219,7 +219,7 @@ MonoBehaviour:
   maxHealth: 2
   shieldRestoreTime: 0
   hitSound: {fileID: 8300000, guid: 0a599dc5bea81fe4eb5aba11b1e542ee, type: 3}
-  source: {fileID: 0}
+  source: {fileID: 1494289598891356176}
   onZeroHp:
     m_PersistentCalls:
       m_Calls:

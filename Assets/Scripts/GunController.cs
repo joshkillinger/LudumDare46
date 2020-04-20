@@ -41,9 +41,8 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Fire1") > 0 && curCooldown <= 0)
+        if (Input.GetAxis("Fire1") > 0 && curCooldown <= 0 && CurrentEnergy > drainAmount)
         {
-
             for (int i = 0; i < shotAmount; i++)
             {
                 var targetBarrel = barrels[++barrelIndex % barrels.Count];

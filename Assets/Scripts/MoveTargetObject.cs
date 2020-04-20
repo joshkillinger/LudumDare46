@@ -21,6 +21,10 @@ public class MoveTargetObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (animator == null) //Player is dead
+        {
+            return;
+        }
         var horizontal = Input.GetAxis("Horizontal");
         var horizontalSpeed = horizontal * speed;
         var horizontalDistance = this.transform.position.x;

@@ -6,6 +6,7 @@ namespace DefaultNamespace
   {
     public static GameObject Player;
     public static float PlayerSpeed = 0;
+    public static int Score = 0;
 
     private void Start()
     {

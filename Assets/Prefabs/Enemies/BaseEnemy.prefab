@@ -63,13 +63,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   shieldRestoreTime: 0
-  hitSound: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 75a021726599acf49b5f6e2fe1627531, type: 3}
   source: {fileID: 7161410871265688081}
   onZeroHp:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7161410871265688087}
-        m_MethodName: Destroy
+        m_MethodName: DestroyEventually
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8059651638850632711}
+        m_MethodName: Event_StopShooting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -220,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shot: {fileID: 6022878855687084315, guid: 197a0ac7c2063c64faaa2c995085b8da, type: 3}
-  onlyShootOnPlayerVisible: 1
+  onlyShootOnPlayerVisible: 0
   maxScatterAngle: 1
 --- !u!1 &8171361568138951278
 GameObject:

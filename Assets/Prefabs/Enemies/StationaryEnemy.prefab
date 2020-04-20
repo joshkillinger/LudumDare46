@@ -14,6 +14,34 @@ CapsuleCollider:
   m_Height: 5.9
   m_Direction: 1
   m_Center: {x: 0, y: 0.31, z: 0}
+--- !u!114 &2855232524498546959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520522507057673034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8e13391341498fa12fe41ad0cfcaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7270375606179591518}
+        m_MethodName: Event_Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  cooldown: 5
+  initialCooldown: 5
 --- !u!114 &3636068304464235920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,10 +63,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7161410871265688081, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 75a021726599acf49b5f6e2fe1627531, type: 3}
     - target: {fileID: 7161410871265688083, guid: a267c81118c4f394ea45087563e699f9,
         type: 3}
       propertyPath: m_Name
       value: StationaryEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688083, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7161410871265688084, guid: a267c81118c4f394ea45087563e699f9,
         type: 3}
@@ -95,12 +133,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5054164345746314056}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161410871265688086, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: onZeroHp.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Die
+      objectReference: {fileID: 0}
     - target: {fileID: 8059651638850632711, guid: a267c81118c4f394ea45087563e699f9,
         type: 3}
       propertyPath: shot
       value: 
       objectReference: {fileID: 8410184470299276420, guid: 468bb4dc3f31c794fae122ee7ba9f8e6,
         type: 3}
+    - target: {fileID: 8171361568138951278, guid: a267c81118c4f394ea45087563e699f9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a267c81118c4f394ea45087563e699f9, type: 3}
 --- !u!1 &7520522507057673034 stripped
@@ -134,10 +212,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7520522507057673037}
     m_Modifications:
+    - target: {fileID: 4716861337907113379, guid: dbe1a4d51d0d1914d90bb631cf148554,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830265239455688511, guid: dbe1a4d51d0d1914d90bb631cf148554,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6693102464015407926, guid: dbe1a4d51d0d1914d90bb631cf148554,
         type: 3}
       propertyPath: m_Name
       value: Enemy_Bloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693102464015407926, guid: dbe1a4d51d0d1914d90bb631cf148554,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893359191794524572, guid: dbe1a4d51d0d1914d90bb631cf148554,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626890845610884716, guid: dbe1a4d51d0d1914d90bb631cf148554,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7690447091612051749, guid: dbe1a4d51d0d1914d90bb631cf148554,
         type: 3}
@@ -196,3 +299,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe1a4d51d0d1914d90bb631cf148554, type: 3}
+--- !u!95 &5054164345746314056 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3441665101501907517, guid: dbe1a4d51d0d1914d90bb631cf148554,
+    type: 3}
+  m_PrefabInstance: {fileID: 7629308450102972789}
+  m_PrefabAsset: {fileID: 0}

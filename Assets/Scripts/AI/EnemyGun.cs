@@ -10,9 +10,13 @@ namespace AI
     public GameObject shot;
     public bool onlyShootOnPlayerVisible = false;
     public float maxScatterAngle = 1;
-    
+    private bool stopShooting = false;
     public void Event_Shoot()
     {
+      if (stopShooting)
+      {
+        return;
+      }
       var transPos = this.transform.position;
       var transRot = this.transform.rotation;
       if (onlyShootOnPlayerVisible)
@@ -36,6 +40,11 @@ namespace AI
       obj.transform.rotation = transRot;
       obj.transform.Rotate(Random.Range(-maxScatterAngle, maxScatterAngle), Random.Range(-maxScatterAngle, maxScatterAngle), 0);
 
+    }
+
+    public void Event_StopShooting()
+    {
+      stopShooting = true;
     }
   }
 }

@@ -31,6 +31,7 @@ public class Health : MonoBehaviour
         if (curHealth <= 0)
         {
             onZeroHp.Invoke();
+            Debug.Log("Invoking!");
         }
     }
 

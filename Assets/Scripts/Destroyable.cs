@@ -9,5 +9,10 @@ namespace DefaultNamespace
     {
       Destroy(this.gameObject);
     }
+
+    public void DestroyEventually()
+    {
+      Destroy(this.gameObject, 2.0f);
+    }
   }
 }

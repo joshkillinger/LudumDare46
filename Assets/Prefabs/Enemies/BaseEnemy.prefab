@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d17b68a829b4cebbfb353615f0079de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 0}
-  onlyShootOnPlayerVisible: 0
+  shot: {fileID: 6022878855687084315, guid: 197a0ac7c2063c64faaa2c995085b8da, type: 3}
+  onlyShootOnPlayerVisible: 1
   maxScatterAngle: 1
 --- !u!1 &8171361568138951278
 GameObject:

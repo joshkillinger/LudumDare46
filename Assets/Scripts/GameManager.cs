@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DefaultNamespace
 {
@@ -25,6 +27,13 @@ namespace DefaultNamespace
     public void Event_SetPlayerDead()
     {
       PlayerIsDead = true;
+      StartCoroutine(goToMenuAfterDelay());
+    }
+
+    private IEnumerator goToMenuAfterDelay()
+    {
+      yield return new WaitForSeconds(5);
+      SceneManager.LoadScene("MainMenu");
     }
   }
 }

@@ -5345,6 +5345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2863952781842928132}
   - component: {fileID: 2863952781842928135}
+  - component: {fileID: 5868991861070088235}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -5359,7 +5360,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952781842928134}
-  m_LocalRotation: {x: -0.0042884946, y: 0.000000025327697, z: 1.0861868e-10, w: 0.9999909}
+  m_LocalRotation: {x: -0.004288511, y: 0.000000025344814, z: 1.0869244e-10, w: 0.9999909}
   m_LocalPosition: {x: 0, y: 7.4, z: -31.119995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5409,6 +5410,21 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2863952783334571271}
+--- !u!114 &5868991861070088235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863952781842928134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &2863952782039405763
 GameObject:
   m_ObjectHideFlags: 0
@@ -5437,7 +5453,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952782039405763}
-  m_LocalRotation: {x: -0.0042884946, y: 0.000000025327697, z: 1.0861868e-10, w: 0.9999909}
+  m_LocalRotation: {x: -0.004288511, y: 0.000000025344814, z: 1.0869244e-10, w: 0.9999909}
   m_LocalPosition: {x: 0, y: 7.4, z: -31.119995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5671,6 +5687,7 @@ GameObject:
   - component: {fileID: 260529272}
   - component: {fileID: 6022885276495885587}
   - component: {fileID: 1902986367597544591}
+  - component: {fileID: 8174844683079643052}
   m_Layer: 8
   m_Name: ShipHolder
   m_TagString: Player
@@ -5715,6 +5732,7 @@ MonoBehaviour:
   go: 1
   targetObject: {fileID: 2863952782614985399}
   boostAnimator: {fileID: 8346383308901896788}
+  engineImpulse: {fileID: 1451308295}
 --- !u!114 &831389667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5783,7 +5801,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 2364519205338020420, guid: fad0d2c0b0d3e8d44962c1835a20ba17, type: 3}
   - {fileID: 3608844012469886547, guid: 6f9c63c799ae59a488aa4b2b1486ef40, type: 3}
-  weaponAmmo: 0000000000000000
+  weaponAmmo: 0200000002000000
   curWeapon: 0
 --- !u!114 &2127530525
 MonoBehaviour:
@@ -5824,6 +5842,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PlayerDeath
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1333938619}
+        m_MethodName: Event_SetPlayerDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &351268958041429709
@@ -5976,6 +6005,47 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8174844683079643052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863952782099834087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 11400000, guid: 20a705aea2d80e0478fb89b6f43d8530, type: 2}
+    m_AmplitudeGain: 3
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.5
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 1000
 --- !u!1 &2863952782614985399
 GameObject:
   m_ObjectHideFlags: 0
@@ -6164,7 +6234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952783258629214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.079998, z: 29.599976}
+  m_LocalPosition: {x: 0, y: 3.079998, z: 29.600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2863952781558472184}
@@ -6394,6 +6464,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1451308295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5145363044321025638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
+    m_AmplitudeGain: 0.1
+    m_FrequencyGain: 2
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.01
+      m_DecayTime: 0.1
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 1000
 --- !u!1 &7445803384912548508
 GameObject:
   m_ObjectHideFlags: 0

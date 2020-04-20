@@ -7,6 +7,7 @@ namespace DefaultNamespace
     public static GameObject Player;
     public static float PlayerSpeed = 0;
     public static int Score = 0;
+    public static bool PlayerIsDead = false;
 
     private void Start()
     {
@@ -19,6 +20,11 @@ namespace DefaultNamespace
       {
         PlayerSpeed = Player.GetComponent<ShipController>().speed;
       }
+    }
+
+    public void Event_SetPlayerDead()
+    {
+      PlayerIsDead = true;
     }
   }
 }

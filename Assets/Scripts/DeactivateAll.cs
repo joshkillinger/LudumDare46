@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -6,6 +7,14 @@ namespace DefaultNamespace
   {
     public void Event_Deactivate()
     {
+      StartCoroutine(DeactivateAtEndOfFrame());
+
+    }
+
+    private IEnumerator DeactivateAtEndOfFrame()
+    {
+      yield return new WaitForEndOfFrame();
+            
       foreach (var component in GetComponents<MonoBehaviour>())
       {
         component.enabled = false;

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,6 +46,12 @@ public class Health : MonoBehaviour
         if (curHealth > 0 && shieldRestoreTime > 0)
         {
             StartCoroutine(restoreHpAfterDelay());
+        }
+
+        var impulse = this.GetComponent<CinemachineImpulseSource>();
+        if (impulse != null)
+        {
+            impulse.GenerateImpulse();
         }
     }
 

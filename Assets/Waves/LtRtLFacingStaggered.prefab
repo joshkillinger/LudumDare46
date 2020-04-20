@@ -49,7 +49,7 @@ MonoBehaviour:
   Prototype: {fileID: 948801458613451678}
   MinCount: 6
   MaxCount: 8
-  Stagger: 0.5
+  Stagger: 0.3
 --- !u!114 &1050848783
 MonoBehaviour:
   m_ObjectHideFlags: 0

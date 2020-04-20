@@ -31,3 +31,9 @@ MonoBehaviour:
   - Name: LtLBtF
     Duration: 9
     Wave: {fileID: 2664228646475917359, guid: 48c4f59bfcd8542409779efb45813944, type: 3}
+  - Name: StationaryL
+    Duration: 4
+    Wave: {fileID: 8987065650053237971, guid: b30bbb219f781e2438c2a054ca628b4f, type: 3}
+  - Name: StationaryR
+    Duration: 5
+    Wave: {fileID: 8987065650053237971, guid: 506e65ea00eff404eb7b5d2f3476b746, type: 3}

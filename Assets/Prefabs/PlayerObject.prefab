@@ -5359,8 +5359,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952781842928134}
-  m_LocalRotation: {x: -0.0042885114, y: 2.688473e-10, z: 1.1529575e-12, w: 0.9999909}
-  m_LocalPosition: {x: 0, y: 7.4, z: -31.12}
+  m_LocalRotation: {x: -0.0042884946, y: 0.000000025327697, z: 1.0861868e-10, w: 0.9999909}
+  m_LocalPosition: {x: 0, y: 7.4, z: -31.119995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2863952783334571271}
@@ -5437,8 +5437,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952782039405763}
-  m_LocalRotation: {x: -0.0042885114, y: 2.688473e-10, z: 1.1529575e-12, w: 0.9999909}
-  m_LocalPosition: {x: 0, y: 7.4, z: -31.12}
+  m_LocalRotation: {x: -0.0042884946, y: 0.000000025327697, z: 1.0861868e-10, w: 0.9999909}
+  m_LocalPosition: {x: 0, y: 7.4, z: -31.119995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2863952781558472184}
@@ -5731,8 +5731,8 @@ MonoBehaviour:
   - {fileID: 1177600235}
   - {fileID: 1986064671}
   shot: {fileID: 1837433589045223570, guid: 33f7fe2d07118db429aa369f192825bb, type: 3}
-  energyMax: 100
-  regenerationRate: 20
+  energyMax: 50
+  regenerationRate: 15
   drainAmount: 2.5
   cooldown: 0.025
   maxDeviation: 0.2
@@ -5756,16 +5756,16 @@ MonoBehaviour:
   gunPresets:
   - shot: {fileID: 1837433589045223570, guid: 33f7fe2d07118db429aa369f192825bb, type: 3}
     clip: {fileID: 8300000, guid: e13c20993e57d194da73e77b0e2fc97d, type: 3}
-    drainAmount: 2.5
-    cooldown: 0.025
+    drainAmount: 7.5
+    cooldown: 0.05
     maxDeviation: 0.2
     shotAmount: 1
   - shot: {fileID: 1837433589045223570, guid: 33f7fe2d07118db429aa369f192825bb, type: 3}
     clip: {fileID: 8300000, guid: 0be3a71c40a143a419128c8aa1f6bb2b, type: 3}
-    drainAmount: 15
-    cooldown: 0.25
+    drainAmount: 30
+    cooldown: 0.5
     maxDeviation: 4
-    shotAmount: 10
+    shotAmount: 8
   selectedIndex: 0
 --- !u!114 &6801639399069217213
 MonoBehaviour:
@@ -6108,7 +6108,7 @@ ParentConstraint:
   m_TranslationAtRest: {x: 0, y: 7.4, z: -31.12}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 7.4, z: -31.12}
+  - {x: 0, y: 7.4, z: -31.119995}
   m_RotationOffsets:
   - {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 0
@@ -6147,7 +6147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863952783258629214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.079998, z: 29.599998}
+  m_LocalPosition: {x: 0, y: 3.079998, z: 29.599976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2863952781558472184}

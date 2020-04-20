@@ -14,6 +14,10 @@ namespace AI
     {
       var shot = gun.shot;
       bulletSpeed = shot.GetComponent<Shot>().speed;
+      if (bulletSpeed <= 0)
+      {
+        bulletSpeed = 300; //This just makes beams work go with it
+      }
     }
 
     protected override void lateUpdate()

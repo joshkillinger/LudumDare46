@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace DefaultNamespace
@@ -73,6 +74,9 @@ namespace DefaultNamespace
           _cheats = new Dictionary<string, Action<string>>();
           _cheats["wave"] = s => runWaveCheat(s);
           _cheats["autospawn"] = s => toggleAutoSpawn(s);
+          _cheats["die"] = s => die(s);
+          _cheats["reload"] = s => reload(s);
+          _cheats["killall"] = s => killAll(s);
         }
         return _cheats;
       }
@@ -116,6 +120,34 @@ namespace DefaultNamespace
       else
       {
         waveGod.SpawnWave(parameters);
+      }
+    }
+
+    private void die(string parameters)
+    {
+      var player = GameObject.FindWithTag("Player").GetComponent<Health>();
+      while (player.CurrentHealth > 0)
+      {
+        player.TakeDamage();
+      }
+    }
+    
+    private void reload(string parameters)
+    {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    private void killAll(string parameters)
+    {
+      waveGod.AutoSpawn = false;
+      
+      var healths = FindObjectsOfType<Health>();
+      foreach (var health in healths)
+      {
+        while (health.CurrentHealth > 0)
+        {
+          health.TakeDamage();
+        }
       }
     }
   }

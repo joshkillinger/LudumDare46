@@ -423,7 +423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Roll: 0
-  leadTime: 1
   gun: {fileID: 9107109335595617355}
 --- !u!95 &7355473330451600436
 Animator:
@@ -524,10 +523,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836b835cb2943c748983e2131d88392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 1
   shieldRestoreTime: 0
   hitSound: {fileID: 8300000, guid: 0a599dc5bea81fe4eb5aba11b1e542ee, type: 3}
   source: {fileID: 5674079788426404602}
+  onZeroHp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4198859462152045049}
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &8112554242414797415
 BoxCollider:
   m_ObjectHideFlags: 0

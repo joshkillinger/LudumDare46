@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Destroyable))]
 public class Health : MonoBehaviour
@@ -11,15 +12,15 @@ public class Health : MonoBehaviour
     
     public AudioClip hitSound;
     public AudioSource source;
+    
+    public UnityEvent onZeroHp = new UnityEvent();
 
     private int curHealth;
     public int CurrentHealth => curHealth;
 
-    private Destroyable destroyable;
     // Start is called before the first frame update
     void Start()
     {
-        destroyable = this.GetComponent<Destroyable>();
         curHealth = maxHealth;
         source.clip = hitSound;
     }
@@ -29,7 +30,7 @@ public class Health : MonoBehaviour
     {
         if (curHealth <= 0)
         {
-            destroyable.Destroy();
+            onZeroHp.Invoke();
         }
     }
 

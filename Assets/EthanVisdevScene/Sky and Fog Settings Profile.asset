@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
+  m_AdvancedMode: 1
   enabled:
     m_OverrideState: 1
     m_Value: 1
@@ -33,20 +33,20 @@ MonoBehaviour:
     showAlpha: 0
     showEyeDropper: 1
   maxFogDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 5000
     min: 0
   mipFogMaxMip:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.5
     min: 0
     max: 1
   mipFogNear:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
     min: 0
   mipFogFar:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1000
     min: 0
   baseHeight:
@@ -57,20 +57,20 @@ MonoBehaviour:
     m_Value: 481.5
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.047169805, g: 0.042942323, b: 0.042942323, a: 1}
+    m_Value: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 66.3
+    m_Value: 61
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   anisotropy:
     m_OverrideState: 1
-    m_Value: 0.606
+    m_Value: -0.32
     min: -1
     max: 1
   globalLightProbeDimmer:
@@ -79,16 +79,16 @@ MonoBehaviour:
     min: 0
     max: 1
   depthExtent:
-    m_OverrideState: 0
-    m_Value: 64
+    m_OverrideState: 1
+    m_Value: 243.8
     min: 0.1
   sliceDistributionUniformity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.75
     min: 0
     max: 1
   filter:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &-7281282666775071781
 MonoBehaviour:
